@@ -6,12 +6,14 @@
   }
 
 body{
-    height: 2000px;
+    height: 1700px;
     font-family: 'Montserrat';
 }
 .navbar{
     position: sticky;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     flex-direction: row;
     z-index: 1;
     top: 0;
@@ -19,16 +21,23 @@ body{
     padding-top: 0.6rem;
     background-color: rgb(255, 255, 255);
     padding-bottom:0.6rem;
+    
 }
 .navbar li{
-    display: inline-block;
+    display: flex;
     text-align: center;
-    padding-left: 2.2rem;
-    padding-right: 2.2rem;
     padding-top: 1.2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.navbar ul{
+    display: flex;
+    margin: auto;
+
 }
 .navbar p{
-    padding-right: 20rem;
+    padding-right: 23rem;
     padding-left: 2rem;
     padding-top: 10px;
     font-weight: 600;
@@ -88,7 +97,7 @@ body{
     transform: translateY(-8px);
 }
 .infotab{
-    margin-top: 18.75rem;
+    margin-top: 25rem;
     text-align: center;
 }
 .infotab h1{
@@ -97,6 +106,7 @@ body{
 }
 .infotab p{
     font-weight: 400;
+    padding-bottom: 2.5rem;
 }
 .top{
     height: 2.5rem;
@@ -115,49 +125,71 @@ body{
     cursor: pointer;
 }
 .infotab2{
+    justify-content: space-evenly;
+    gap: 2rem;
     display: flex;
     text-align: center;
     gap: 0rem;
 }
 .infotab2 h1{
     font-size: 1.25rem;
-    margin-bottom: 2.75rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
     color: aliceblue;
 }
 .infotab2 p{
+    margin-top: 1rem;
     color: aliceblue;
+    padding: 0.2rem;
+    font-weight: 500;
 }
-
+.infotab2 img{
+    height: 5rem;
+}
 .container1{
-    width: 35%;
+    width: 20%;
     background-color: rgb(66, 150, 188);
     margin:1rem;
     height: 18.75rem;
-
+    border-radius: 2rem;
+    animation-delay: 10s;
 }
+
 .container2{
-    width: 35%;
+    width: 20%;
     background-color: rgb(66, 150, 188);
     margin:1rem;
     height: 18.75rem;
+    border-radius: 2rem;
 
 }
 .container3{
-    width: 35%;
+    width: 20%;
     background-color: rgb(66, 150, 188);
     margin:1rem;
     height: 18.75rem;
-
+    border-radius: 2rem;
 }
 .container4{
-    width: 35%;
+    width: 20%;
     background-color: rgb(66, 150, 188);
     margin:1rem;
     height: 18.75rem;
-
+    border-radius: 2rem;
 }
 
 /* Animation content*/
+@keyframes slidetop{
+    from{
+        transform: translateY(12.5rem);
+        visibility: visible;
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0rem);
+        visibility: visible;
+    }
+}
 @keyframes slideright{
     from{
         transform: translateX(-18rem);
@@ -191,43 +223,126 @@ body{
     animation: slideright;
     animation-duration: 2s;
 }
-/*Responsive tab*/
-
-@media (max-width: 600px ) { 
-    html {
-        font-size: 0.5rem;
-    }
-    .img1 button{
-        border: solid 2px;
-        font-size: 1rem;
-    }
+.animate-slidetop{
+    animation: slidetop forwards;
+    animation-duration: 2s;
+    visibility: hidden;
 }
-/*Tablets*/
-@media (max-width: 1024px ) { 
+.delay1{
+    animation-delay: 1s;
+}
+.delay2{
+    animation-delay: 2s;
+}
+.delay3{
+    animation-delay: 3s;
+}
+.delay4{
+    animation-delay: 4s;
+}
+/*Responsive tab*/
+@media(max-width:1376px){
     html{
         font-size: 15px;
-    }
-    .navbar{
-        padding-top: 0.4rem;
-        padding-bottom:0.4rem;
-    }
-    .navbar li{
-        padding-right: 1.2rem;
-        padding-left: 1.2rem;
-        padding-top: 0.6rem;
+        transition: font-size 0.5s;
+        
     }
     .navbar p{
-        padding-right: 12rem;
+        padding-right: 10rem;
         padding-left: 1.5rem;
-        padding-top: 10px;
-        font-weight: 600;
-        color: rgb(66, 150, 188);;
+        transition: padding-right 0.5s, padding-left 0.5s;
+    }
+    .img1 h1{
+        padding-left: 7.5rem;
+        transition: padding-left 0.5s;
+    }
+    .img1 p{
+        padding-left: 7.5rem;
+        transition: padding-left 0.5s;
+    }
+    .img1 button{
+        transition:left 0.5s;
+        left: 7.5rem;
+    }
+    .container1,
+    .container2,
+    .container3,
+    .container4{
+       
+        transition: width 1s;
+    }
+}
+@media(max-width:1099px){
+    html{
+        font-size: 14px;
+        transition: font-size 0.5s;
+    }
+    .navbar p{
+        padding-right: 5rem;
+        padding-left: 1rem;
+        transition: padding-right 0.5s, padding-left 0.5s;
+    }
+    .img1 h1{
+        transition: padding-left 0.5s;
+        padding-left: 5rem;
+    }
+    .img1 p{
+        transition: padding-left 0.5s;
+        padding-left: 5rem;
+    }
+    .img1 button{
+        transition:left 0.5s;
+        left: 5rem;
+    }
+    .infotab2{
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .container1,
+    .container2,
+    .container3,
+    .container4{
+        width: 30%;
+        transition: width 1s;
+    }
+}
+@media(max-width:945px){
+    html{
+        font-size: 13px;
+        transition: font-size 0.5s;
+    }
+    .navbar p{
+        font-size: 12px;
+        padding-right: 5rem;
+        padding-left: 1rem;
+        transition: padding-right 0.5s, padding-left 0.5s;
+    }
+    .img1 h1{
+        transition: padding-left 0.5s;
+        padding-left: 5rem;
+    }
+    .img1 p{
+        transition: padding-left 0.5s;
+        padding-left: 5rem;
+    }
+    .img1 button{
+        transition:left 0.5s;
+        left: 5rem;
+    }
+}
+@media (max-width:768px){
+    html{
+        font-size: 10px;
+    }
+    .navbar{
+        flex-direction: column;
+        text-align: center;
+    }
+    .navbar p{
+        padding-left: 0rem;
+        padding-right: 0rem;
     }
     .navbar h1{
-        color: rgb(66, 150, 188);;
-        padding-left: 2rem;
-        font-size: 2.25;
-        padding-right: 50px;
+        padding-left: 0rem;
     }
-
 }
