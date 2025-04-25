@@ -345,4 +345,15 @@ body{
     .navbar h1{
         padding-left: 0rem;
     }
+    .infowrap{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .container1,
+    .container2,
+    .container3,
+    .container4{
+        width: 40%;
+        transition: width 1s;
+    }
 }
