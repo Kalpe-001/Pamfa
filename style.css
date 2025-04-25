@@ -128,9 +128,27 @@ body{
     color: aliceblue;
 }
 
-.container1,
-.container2,
-.container3,
+.container1{
+    width: 35%;
+    background-color: rgb(66, 150, 188);
+    margin:1rem;
+    height: 18.75rem;
+
+}
+.container2{
+    width: 35%;
+    background-color: rgb(66, 150, 188);
+    margin:1rem;
+    height: 18.75rem;
+
+}
+.container3{
+    width: 35%;
+    background-color: rgb(66, 150, 188);
+    margin:1rem;
+    height: 18.75rem;
+
+}
 .container4{
     width: 35%;
     background-color: rgb(66, 150, 188);
