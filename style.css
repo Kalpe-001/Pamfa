@@ -1,0 +1,215 @@
+
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+body{
+    height: 2000px;
+    font-family: 'Montserrat';
+}
+.navbar{
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    z-index: 1;
+    top: 0;
+    display: flex;
+    padding-top: 0.6rem;
+    background-color: rgb(255, 255, 255);
+    padding-bottom:0.6rem;
+}
+.navbar li{
+    display: inline-block;
+    text-align: center;
+    padding-left: 2.2rem;
+    padding-right: 2.2rem;
+    padding-top: 1.2rem;
+}
+.navbar p{
+    padding-right: 20rem;
+    padding-left: 2rem;
+    padding-top: 10px;
+    font-weight: 600;
+    color: rgb(66, 150, 188);;
+}
+.navbar h1{
+    color: rgb(66, 150, 188);;
+    padding-left: 2rem;
+    font-size: 2.25rem;
+    padding-right: 50px;
+}
+.navbar a{
+    text-decoration: none;
+    font-weight: 800;
+    color: rgb(66, 150, 188);;
+}
+
+.front-img img{
+    position: absolute;
+    top: 4rem;
+    width:100%;
+    height: 46rem;
+    z-index: -1;
+    transform: rotate(180deg);
+    object-fit: cover;
+    object-position: top right;
+
+}
+.img1 h1{
+    color:aliceblue;
+    padding-left: 10rem;
+    padding-top: 10rem;
+    padding-bottom: 3.1rem;
+    font-size: 3rem;
+}
+.img1 p{
+    color:aliceblue;
+    padding-left: 10rem;
+    font-weight:500;
+}
+.img1 button{
+    position: absolute;
+    margin-top: 2.5rem;
+    left: 10rem;
+    width: 6rem;
+    height: 2.5rem;
+    border: solid 3px aliceblue;
+    border-radius: 1.25rem;
+    background-color: transparent;
+    font-weight: 800;
+    color: aliceblue;
+    transition: transform 0.3s, background-color 0.2s ease-in, color 0.2s;
+}
+.img1 button:hover{
+    background-color: aliceblue;
+    color: rgb(66, 150, 188);
+    transform: translateY(-8px);
+}
+.infotab{
+    margin-top: 18.75rem;
+    text-align: center;
+}
+.infotab h1{
+    font-size: 3rem;
+    padding-bottom: 2.5rem;
+}
+.infotab p{
+    font-weight: 400;
+}
+.top{
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    border: solid 4px rgb(66, 150, 188);
+    border-radius: 1.25rem;
+    background-color: transparent;
+    color: rgb(66, 150, 188);
+    position: absolute;
+    right: 0;
+    margin-right: 2rem;
+}
+.top:hover{
+    cursor: pointer;
+}
+.infotab2{
+    display: flex;
+    text-align: center;
+    gap: 0rem;
+}
+.infotab2 h1{
+    font-size: 1.25rem;
+    margin-bottom: 2.75rem;
+    color: aliceblue;
+}
+.infotab2 p{
+    color: aliceblue;
+}
+
+.container1,
+.container2,
+.container3,
+.container4{
+    width: 35%;
+    background-color: rgb(66, 150, 188);
+    margin:1rem;
+    height: 18.75rem;
+
+}
+
+/* Animation content*/
+@keyframes slideright{
+    from{
+        transform: translateX(-18rem);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0rem);
+        opacity: 1;
+    }
+}
+@keyframes fade-in {
+    from{
+        transform: translateY(-3rem);
+        opacity: 0;
+        visibility: visible;
+    }
+    to{
+        transform: translateY(0rem);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+}
+.fade-in{
+    animation: fade-in forwards;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    visibility: hidden;
+}
+.animate-slideright{
+    animation: slideright;
+    animation-duration: 2s;
+}
+/*Responsive tab*/
+
+@media (max-width: 600px ) { 
+    html {
+        font-size: 0.5rem;
+    }
+    .img1 button{
+        border: solid 2px;
+        font-size: 1rem;
+    }
+}
+/*Tablets*/
+@media (max-width: 1024px ) { 
+    html{
+        font-size: 15px;
+    }
+    .navbar{
+        padding-top: 0.4rem;
+        padding-bottom:0.4rem;
+    }
+    .navbar li{
+        padding-right: 1.2rem;
+        padding-left: 1.2rem;
+        padding-top: 0.6rem;
+    }
+    .navbar p{
+        padding-right: 12rem;
+        padding-left: 1.5rem;
+        padding-top: 10px;
+        font-weight: 600;
+        color: rgb(66, 150, 188);;
+    }
+    .navbar h1{
+        color: rgb(66, 150, 188);;
+        padding-left: 2rem;
+        font-size: 2.25;
+        padding-right: 50px;
+    }
+
+}
